@@ -56,4 +56,8 @@ vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+vim.keymap.set('i', '<up>', '<cmd>echo "Use C-p to move!!"<CR>')
+vim.keymap.set('i', '<down>', '<cmd>echo "Use C-n to move!!"<CR>')
 
+-- Make enter to always go to the next line
+-- vim.keymap.set('i', '<CR>', '<ESC>o')

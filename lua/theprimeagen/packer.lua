@@ -51,6 +51,14 @@ return require('packer').startup(function(use)
 --   end
 -- }
 
+
+use {
+    'akinsho/flutter-tools.nvim',
+    requires = {
+        'nvim-lua/plenary.nvim',
+    },
+}
+
   use({
     "stevearc/oil.nvim",
     config = function()
