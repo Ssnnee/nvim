@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/sne/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/sne/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
+local package_path_str = "/home/sne/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1707061634/share/lua/5.1/?/init.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?.lua;/home/sne/.cache/nvim/packer_hererocks/2.1.1707061634/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/sne/.cache/nvim/packer_hererocks/2.1.1707061634/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -120,10 +120,21 @@ _G.packer_plugins = {
     path = "/home/sne/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/home/sne/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/home/sne/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/sne/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -134,6 +145,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sne/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/sne/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
     loaded = true,
@@ -256,10 +272,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: tokyonight.nvim
-time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\2\nl\0\0\3\0\6\0\v6\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\21Comment gui=none\ahi\21tokyonight-night\16colorscheme\bcmd\bvim\0", "config", "tokyonight.nvim")
-time([[Config for tokyonight.nvim]], false)
 -- Config for: oil.nvim
 time([[Config for oil.nvim]], true)
 try_loadstring("\27LJ\2\nO\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\26default_file_explorer\1\nsetup\boil\frequire\0", "config", "oil.nvim")
@@ -268,6 +280,14 @@ time([[Config for oil.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: tokyonight.nvim
+time([[Config for tokyonight.nvim]], true)
+try_loadstring("\27LJ\2\nl\0\0\3\0\6\0\v6\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\0016\0\0\0009\0\1\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\21Comment gui=none\ahi\21tokyonight-night\16colorscheme\bcmd\bvim\0", "config", "tokyonight.nvim")
+time([[Config for tokyonight.nvim]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
