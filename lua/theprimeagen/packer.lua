@@ -148,4 +148,6 @@ use({
 	use("eandrju/cellular-automaton.nvim")
 	use("laytan/cloak.nvim")
 	use("lewis6991/gitsigns.nvim")
+  -- use {'akinsho/bufferline.nvim', tag = "*"}
+
 end)
