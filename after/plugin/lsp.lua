@@ -18,12 +18,7 @@ require('mason-lspconfig').setup({
         diagnostics = {
           globals = {'vim'}
         }
-      }
-    }
-  })
-})
-
-
+      } } }) })
 -- Fix Undefined global 'vim'
 -- lsp.nvim_workspace()
 

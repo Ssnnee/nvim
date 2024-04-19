@@ -18,5 +18,15 @@ require("oil").setup{
 
    -- Skip the confirmation popup for simple operations
   skip_confirm_for_simple_edits = true,
+  --
+   -- Set to false to disable all of the above keymaps
+  use_default_keymaps = false,
+   keymaps = {
+    ["g?"] = "actions.show_help",
+    ["<CR>"] = "actions.select",
+    ["<C-c>"] = "actions.close",
+    ["<C-l>"] = "actions.refresh",
+    ["-"] = "actions.parent",
+  },
 
 }
