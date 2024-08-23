@@ -8,7 +8,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'tsserver', 'rust_analyzer', 'ltex', 'prismals', 'pylsp', 'tailwindcss' },
+  ensure_installed = {'tsserver', 'rust_analyzer', 'prismals', 'pylsp', 'tailwindcss' },
   handlers = {
     lsp.default_setup,
   },

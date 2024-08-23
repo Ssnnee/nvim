@@ -11,13 +11,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("n", "<leader>vwm", function()
-  require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-  require("vim-with-me").StopVimWithMe()
-end)
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -50,14 +43,25 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
 
--- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+-- -- Make some mappings for Optimot keyboad
 
-vim.keymap.set('i', '<up>', '<cmd>echo "Use C-p to move!!"<CR>')
-vim.keymap.set('i', '<down>', '<cmd>echo "Use C-n to move!!"<CR>')
+-- Remapper les touches de direction
+vim.keymap.set('', 'p', 'h', { noremap = true, silent = true })
+vim.keymap.set('', 't', 'j', { noremap = true, silent = true })
+vim.keymap.set('', 's', 'k', { noremap = true, silent = true })
+vim.keymap.set('', 'r', 'l', { noremap = true, silent = true })
 
--- Make enter to always go to the next line
--- vim.keymap.set('i', '<CR>', '<ESC>o')
+-- vim.keymap.set('v', 'p', 'h', { noremap = true, silent = true })
+-- vim.keymap.set('v', 't', 'j', { noremap = true, silent = true })
+-- vim.keymap.set('v', 's', 'k', { noremap = true, silent = true })
+-- vim.keymap.set('v', 'r', 'l', { noremap = true, silent = true })
+
+-- vim la touche de renommer de 'r' à 'é'
+vim.keymap.set('', 'é', 'r', { noremap = true, silent = true })
+vim.keymap.set('', 'h', 'p', { noremap = true, silent = true })
+-- Remapper l'action coller de 'p' à 'q'
+-- vim.keymap.set('n', 'q', 'p', { noremap = true, silent = true })
+
+-- Remapper l'action d'enregistrement de macro de 'q' à 'a'
+-- vim.keymap.set('n', 'a', 'q', { noremap = true, silent = true })
+
