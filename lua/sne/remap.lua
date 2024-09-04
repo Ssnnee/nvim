@@ -43,25 +43,17 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
 
--- -- Make some mappings for Optimot keyboad
+vim.keymap.set("n", "<leader>md", "<cmd>Markview disable<CR>")
+vim.keymap.set("n", "<leader>me", "<cmd>Markview enable<CR>")
 
--- Remapper les touches de direction
+-- Make some mappings for Optimot keyboad
+
 vim.keymap.set('', 'p', 'h', { noremap = true, silent = true })
 vim.keymap.set('', 't', 'j', { noremap = true, silent = true })
 vim.keymap.set('', 's', 'k', { noremap = true, silent = true })
 vim.keymap.set('', 'r', 'l', { noremap = true, silent = true })
 
--- vim.keymap.set('v', 'p', 'h', { noremap = true, silent = true })
--- vim.keymap.set('v', 't', 'j', { noremap = true, silent = true })
--- vim.keymap.set('v', 's', 'k', { noremap = true, silent = true })
--- vim.keymap.set('v', 'r', 'l', { noremap = true, silent = true })
+vim.keymap.set('', 'T', 'J', { noremap = true, silent = true })
 
--- vim la touche de renommer de 'r' à 'é'
 vim.keymap.set('', 'é', 'r', { noremap = true, silent = true })
 vim.keymap.set('', 'h', 'p', { noremap = true, silent = true })
--- Remapper l'action coller de 'p' à 'q'
--- vim.keymap.set('n', 'q', 'p', { noremap = true, silent = true })
-
--- Remapper l'action d'enregistrement de macro de 'q' à 'a'
--- vim.keymap.set('n', 'a', 'q', { noremap = true, silent = true })
-
