@@ -46,14 +46,18 @@ end)
 vim.keymap.set("n", "<leader>md", "<cmd>Markview disable<CR>")
 vim.keymap.set("n", "<leader>me", "<cmd>Markview enable<CR>")
 
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+
 -- Make some mappings for Optimot keyboad
 
-vim.keymap.set('', 'p', 'h', { noremap = true, silent = true })
-vim.keymap.set('', 't', 'j', { noremap = true, silent = true })
-vim.keymap.set('', 's', 'k', { noremap = true, silent = true })
-vim.keymap.set('', 'r', 'l', { noremap = true, silent = true })
+vim.keymap.set("n", "<C-g>", "<S-g>")
+vim.keymap.set("n", "XX", "<cmd>wq<CR>")
 
-vim.keymap.set('', 'T', 'J', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 
-vim.keymap.set('', 'é', 'r', { noremap = true, silent = true })
-vim.keymap.set('', 'h', 'p', { noremap = true, silent = true })
+-- Exit the terminal mode with ESC
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

@@ -46,14 +46,7 @@ vim.opt.colorcolumn = "80"
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
--- vim.opt.mouse =""
-
--- Exit the terminal mode with ESC
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
-
--- Set for optimot keyboard
-
+vim.opt.mouse =""
 
 
 
