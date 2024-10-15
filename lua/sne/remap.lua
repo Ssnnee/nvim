@@ -55,7 +55,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Make some mappings for Optimot keyboad
 
 vim.keymap.set("n", "<C-g>", "<S-g>")
-vim.keymap.set("n", "XX", "<cmd>wq<CR>")
+vim.keymap.set("n", "XX", "<cmd><CR>")
 
 vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 
