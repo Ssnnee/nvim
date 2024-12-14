@@ -46,7 +46,7 @@ vim.opt.colorcolumn = "80"
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.opt.mouse =""
+-- vim.opt.mouse =""
 
 
 
