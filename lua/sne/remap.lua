@@ -2,6 +2,13 @@ vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>w", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- Put the cursor at the same position while pasting in normal mode
+vim.keymap.set("n", "p", function()
+  local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+  vim.cmd("norm! p")
+  vim.api.nvim_win_set_cursor(0, { row + 1, col })
+end)
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -51,6 +58,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set("v", "<leader>ec", "<cmd>.!toilet -w 200 -f term -F border<CR>")
+vim.keymap.set("v", "<leader>fi", "<cmd>.!figlet<CR>")
 
 -- Make some mappings for Optimot keyboad
 
