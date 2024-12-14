@@ -1,6 +1,7 @@
 require("sne.set")
 require("sne.remap")
 require("sne.lazy_init")
+require("sne.present").setup()
 
 -- DO.not
 -- DO NOT INCLUDE THIS
