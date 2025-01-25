@@ -58,6 +58,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Frame text
 vim.keymap.set("v", "<leader>ec", "<cmd>.!toilet -w 200 -f term -F border<CR>")
 vim.keymap.set("v", "<leader>fi", "<cmd>.!figlet<CR>")
 
@@ -70,3 +71,4 @@ vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 
 -- Exit the terminal mode with ESC
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+

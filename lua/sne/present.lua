@@ -366,6 +366,7 @@ M.configure_slide_buffer = function(window)
     ["n"] = M.next,
     ["p"] = M.prev,
     ["q"] = M.quit,
+    ["ZZ"] = M.quit,
     ["f"] = M.first,
     ["l"] = M.last,
     ["<CR>"] = M.next,
