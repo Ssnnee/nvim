@@ -2,7 +2,7 @@ require("sne.set")
 require("sne.remap")
 require("sne.lazy_init")
 require("sne.present").setup()
--- require("sne.autoclose").setup()
+require("sne.autoclose").setup()
 
 -- DO.not
 -- DO NOT INCLUDE THIS

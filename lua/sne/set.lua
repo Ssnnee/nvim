@@ -5,15 +5,12 @@ vim.opt.relativenumber = true
 
 -- vim.opt.clipboard = "unnamedplus"
 
-
-
 -- Enable break indent
 vim.opt.breakindent = true
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -47,8 +44,6 @@ vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 10
 
 -- vim.opt.mouse =""
-
-
 
 -- Spell
 -- vim.opt.spelllang = 'en_gb'

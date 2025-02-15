@@ -20,15 +20,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("", "<leader>.", "<C-w>")
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-
--- This is going to get me cancelled
-vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.config/scripts/fzf_and_vim <CR>")
@@ -43,7 +41,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/lua/sne/lazy/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
@@ -52,6 +50,8 @@ end)
 
 vim.keymap.set("n", "<leader>md", "<cmd>Markview disable<CR>")
 vim.keymap.set("n", "<leader>me", "<cmd>Markview enable<CR>")
+
+vim.keymap.set("", "<leader>b", "<cmd>Telescope buffers<CR>")
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
@@ -72,3 +72,7 @@ vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 -- Exit the terminal mode with ESC
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set('n', 'gK', function()
+  local new_config = not vim.diagnostic.config().virtual_lines
+  vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = 'Toggle diagnostic virtual_lines' })
