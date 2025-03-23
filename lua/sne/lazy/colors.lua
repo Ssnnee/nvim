@@ -72,7 +72,7 @@ return {
       vim.cmd.colorscheme "catppuccin-mocha"
     end
   },
-  -- Lazy
+  -- Vague
   {
     "vague2k/vague.nvim",
     config = function()
@@ -81,14 +81,14 @@ return {
         transparent = true,
         style = {
           -- "none" is the same thing as default. But "italic" and "bold" are also valid options
-          boolean = "none",
+          boolean = "bold",
           number = "none",
           float = "none",
           error = "bold",
           comments = "italic",
           conditionals = "none",
           functions = "none",
-          headings = "none",
+          headings = "bold",
           operators = "none",
           strings = "none",
           variables = "none",
@@ -133,21 +133,32 @@ return {
         -- Override colors
         colors = {
           -- Background and base colors
-          bg = "#000000",        -- Plus sombre, comme votre terminal
-          fg = "#cdd6f4",        -- Repris de votre terminal
-          floatBorder = "#333333", -- Plus sombre, basé sur votre bright black
-          line = "#121212",      -- Légèrement plus clair que le fond
+          bg = "#000000",
+          fg = "#cdd6f4",
+          floatBorder = "#333333",
+          line = "#121212",
 
           -- Syntax colors (moins saturés)
           comment = "#606079",
-          -- comment = "#444444",   -- Gris très sombre
-          builtin = "#888888",   -- Repris du bleu de votre terminal
-          func = "#999999",      -- Repris du magenta de votre terminal
-          string = "#a5aaa7",    -- Repris du vert de votre terminal
-          number = "#94e2d5",    -- Repris du cyan, mais utilisé pour les nombres
-          property = "#888888",  -- Gris moyen
-          constant = "#999999",  -- Gris clair
-          parameter = "#888888", -- Gris moyen
+          -- comment = "#444444",
+          builtin = "#888888",
+          func = "#96a6c8",
+          string = "#94e2d5",
+          number = "#9e95c7",
+          property = "#f4f4ff",
+          constant = "#95a99f",
+          parameter = "#f4f4ff",
+          -- property = "#888888",  -- Gris moyen
+          -- constant = "#999999",  -- Gris clair
+          -- parameter = "#888888", -- Gris moyen
+
+          -- builtin = "#95a99f",   -- gruber-darker-quartz
+          -- func = "#96a6c8",      -- gruber-darker-niagara
+          -- string = "#73c936",    -- gruber-darker-green
+          -- number = "#9e95c7",    -- gruber-darker-wisteria
+          -- property = "#f4f4ff",  -- gruber-darker-fg+1
+          -- constant = "#95a99f",  -- gruber-darker-quartz
+          -- parameter = "#f4f4ff", -- gruber-darker-fg+1
 
           -- UI elements
           visual = "#333738",
@@ -157,17 +168,34 @@ return {
 
           -- Language elements
           operator = "#666666",  -- Gris foncé
-          keyword = "#888888",   -- Gris moyen
+          keyword = "#f9e2af",   -- Gris moyen
           type = "#999999",      -- Gris clair
 
+          -- operator = "#e4e4ef",  -- gruber-darker-fg
+          -- keyword = "#ffdd33",   -- gruber-darker-yellow
+          -- type = "#95a99f",      -- gruber-darker-quartz
+
           -- Search and diff
-          -- search = "#ffcc00",
-          search = "#FED57C",
-          plus = "#a5aaa7",      -- Vert désaturé
+          -- search = "#b4befe",
+          search = "#f9e2af",
+          plus = "#94e2d5",      -- Vert désaturé
           delta = "#f9e2af",     -- Jaune désaturé
+
+          -- search = "#ffdd33",    -- gruber-darker-yellow
+          -- plus = "#73c936",      -- gruber-darker-green
+          -- delta = "#ffdd33",     -- gruber-darker-yellow
         },
       })
       vim.cmd.colorscheme "vague"
+      vim.api.nvim_set_hl(0, 'LineNr', {fg = '#f9e2af'})
+      vim.api.nvim_set_hl(0, 'LineNrAbove', {fg = '#606079'})
+      vim.api.nvim_set_hl(0, 'LineNrBelow', {fg = '#606079'})
     end
   },
 }
+
+--- Great colorscheme out of the box
+---  habamax
+---  default
+--- retrobox
+--- wildcharm

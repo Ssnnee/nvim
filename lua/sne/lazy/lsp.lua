@@ -67,6 +67,25 @@ return {
             }
           }
         end,
+        volar = function()
+          local lspconfig = require("lspconfig")
+          lspconfig.volar.setup {
+            init_options = {
+              plugins = {
+                {
+                  name = "@vue/typescript-plugin",
+                  location = "~/.bun/install/cache/@vue/typescript-plugin/2.2.8@@@1",
+                  languages = {"javascript", "typescript", "vue"},
+                },
+              },
+            },
+            filetypes = {
+              "javascript",
+              "typescript",
+              "vue",
+            },
+          }
+        end,
       }
     })
 
@@ -88,15 +107,19 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
-      }, {
+      },
+        {
           { name = 'buffer' },
-        })
+        }),
+      formatting = {
+                format = require("nvim-highlight-colors").format
+        }
     })
 
     vim.diagnostic.config({
       -- update_in_insert = true,
       float = {
-        focusable = false,
+        focusable = true,
         style = "minimal",
         border = "rounded",
         source = "always",
