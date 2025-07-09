@@ -1,9 +1,8 @@
 vim.opt.guicursor = ""
+vim.opt.guifont = { "Iosevka", ":h16" }
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
-
--- vim.opt.clipboard = "unnamedplus"
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -11,13 +10,12 @@ vim.opt.breakindent = true
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.smartindent = true
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-
-vim.opt.smartindent = true
 
 vim.opt.wrap = true
 
@@ -34,6 +32,7 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
+vim.opt.iskeyword:append("-")
 
 vim.opt.updatetime = 50
 

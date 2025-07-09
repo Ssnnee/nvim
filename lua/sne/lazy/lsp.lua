@@ -29,6 +29,7 @@ return {
         "lua_ls",
         "pylsp",
         "tailwindcss",
+        "ts_ls",
       },
       handlers = {
         function(server_name) -- default handler (optional)
@@ -67,6 +68,29 @@ return {
             }
           }
         end,
+        ['ts_ls'] = function ()
+          -- 1. Import Mason Registry
+          local mason_registry = require('mason-registry')
+          local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '~/.bun/install/cache/@vue/typescript-plugin/2.2.10@@@1'
+
+          -- 2. Import lspconfig
+          local lspconfig = require('lspconfig')
+
+          -- 3. Configure ts_ls for TypeScript and Vue
+          lspconfig.ts_ls.setup {
+            init_options = {
+              plugins = {
+                {
+                  name = '@vue/typescript-plugin',
+                  location = vue_language_server_path,
+                  languages = { 'vue' },
+                },
+              },
+            },
+            filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+          }
+        end,
+
         volar = function()
           local lspconfig = require("lspconfig")
           lspconfig.volar.setup {
@@ -74,7 +98,7 @@ return {
               plugins = {
                 {
                   name = "@vue/typescript-plugin",
-                  location = "~/.bun/install/cache/@vue/typescript-plugin/2.2.8@@@1",
+                  location = "~/.bun/install/cache/@vue/typescript-plugin/2.2.10@@@1",
                   languages = {"javascript", "typescript", "vue"},
                 },
               },
@@ -112,8 +136,8 @@ return {
           { name = 'buffer' },
         }),
       formatting = {
-                format = require("nvim-highlight-colors").format
-        }
+        format = require("nvim-highlight-colors").format
+      }
     })
 
     vim.diagnostic.config({
