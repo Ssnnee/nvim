@@ -1,5 +1,6 @@
 vim.opt.guicursor = ""
 vim.opt.guifont = { "Iosevka", ":h16" }
+vim.g.have_nerd_font = true
 
 vim.opt.nu = true
 vim.opt.relativenumber = true

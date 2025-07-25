@@ -59,7 +59,7 @@ return {
         -- Override colors
         colors = {
           -- Background and base colors
-          bg = "#000000",
+          bg = "#181818",
           fg = "#cdd6f4",
           floatBorder = "#333333",
           line = "#121212",
@@ -121,8 +121,8 @@ return {
 }
 
 --- Great colorscheme out of the box
----  habamax
----  default
+--- habamax
+--- default
 --- retrobox
 --- wildcharm
 --- unokai
