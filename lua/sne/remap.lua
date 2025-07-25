@@ -60,9 +60,6 @@ vim.keymap.set("n", "XX", "<cmd><CR>")
 
 vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<CR>")
 
--- Exit the terminal mode with ESC
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
 vim.keymap.set('n', 'gK', function()
   local new_config = not vim.diagnostic.config().virtual_lines
   vim.diagnostic.config({ virtual_lines = new_config })
