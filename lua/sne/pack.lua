@@ -1,20 +1,26 @@
 vim.pack.add({
-  { src = 'https://github.com/vague2k/vague.nvim' },
+	{ src = 'https://github.com/vague2k/vague.nvim' },
+	{ src = 'https://github.com/lewis6991/gitsigns.nvim' },
+	{ src = 'https://github.com/github/copilot.vim' },
+	{ src = 'https://github.com/kylechui/nvim-surround' },
+	{ src = 'https://github.com/brenoprata10/nvim-highlight-colors' },
+	{ src = 'https://github.com/stevearc/oil.nvim' },
+	{ src = 'https://github.com/nvim-telescope/telescope.nvim', },
+	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+	{ src = 'https://github.com/mbbill/undotree' },
+	{ src = 'https://github.com/tpope/vim-fugitive' },
+	{ src = 'https://github.com/echasnovski/mini.pick' },
 
-  -- Specify plugin's name (here the plugin will be called "plugin2"
-  -- instead of "generic-name")
-  { src = 'https://github.com/user/generic-name', name = 'plugin2' },
-
-  -- Specify version to follow during install and update
-  {
-    src = 'https://github.com/user/plugin3',
-    -- Version constraint, see |vim.version.range()|
-    version = vim.version.range('1.0'),
-  },
-  {
-    src = 'https://github.com/user/plugin4',
-    -- Git branch, tag, or commit hash
-    version = 'main',
-  },
+	{ src = 'https://github.com/neovim/nvim-lspconfig', },
+	"https://github.com/williamboman/mason.nvim",
+	"https://github.com/williamboman/mason-lspconfig.nvim",
+	"https://github.com/hrsh7th/cmp-nvim-lsp",
+	"https://github.com/hrsh7th/cmp-buffer",
+	"https://github.com/hrsh7th/cmp-path",
+	"https://github.com/hrsh7th/cmp-cmdline",
+	"https://github.com/hrsh7th/nvim-cmp",
+	"https://github.com/L3MON4D3/LuaSnip",
+	"https://github.com/saadparwaiz1/cmp_luasnip",
+	"https://github.com/j-hui/fidget.nvim",
+	"https://github.com/nvim-lua/plenary.nvim",
 })
-
