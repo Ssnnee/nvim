@@ -4,7 +4,8 @@ vim.keymap.set("n", "<leader>w", "<CMD>Oil<CR>", { desc = "Open parent directory
 
 -- Put the cursor at the same position while pasting in normal mode
 vim.keymap.set("n", "p", function()
-  local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+  local cursor = vim.api.nvim_win_get_cursor(0)
+  local row, col = cursor[1], cursor[2]
   vim.cmd("norm! p")
   vim.api.nvim_win_set_cursor(0, { row + 1, col })
 end)
