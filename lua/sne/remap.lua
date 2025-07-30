@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
-vim.keymap.set("n", "<leader>w", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set('n', '<C-p>', "<cmd>Pick files<cr>")
+vim.keymap.set('n', '<leader>ps', '<cmd>Pick grep<CR>')
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Put the cursor at the same position while pasting in normal mode
 vim.keymap.set("n", "p", function()
@@ -22,11 +25,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("", "<leader>.", "<C-w>")
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -47,9 +45,9 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>.", "<C-w>")
+vim.keymap.set("n", "<leader>w", "<C-w>")
 
-vim.keymap.set("", "<leader>tb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set("", "<leader>tb", "<cmd>Pick buffers<CR>")
 vim.keymap.set("", "<leader>bn", "<cmd>bnext<CR>")
 vim.keymap.set("", "<leader>bp", "<cmd>bprevious<CR>")
 
@@ -68,7 +66,7 @@ end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- Copy Full File-Path
 vim.keymap.set("n", "<leader>pa", function()
-	local path = vim.fn.expand("%:p")
-	vim.fn.setreg("+", path)
-	print("file:", path)
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  print("file:", path)
 end)

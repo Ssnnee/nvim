@@ -1,6 +1,6 @@
+require("sne.pack")
 require("sne.set")
 require("sne.remap")
-require("sne.lazy_init")
 require("sne.terminal")
 require("sne.present").setup()
 -- require("sne.autoclose").setup()
