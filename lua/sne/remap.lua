@@ -1,8 +1,5 @@
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>w", vim.cmd.Ex)
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set('n', '<C-p>', "<cmd>Pick files<cr>")
-vim.keymap.set('n', '<leader>ps', '<cmd>Pick grep<CR>')
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Put the cursor at the same position while pasting in normal mode
@@ -26,14 +23,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("", "<leader>.", "<C-w>")
 
--- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.config/scripts/fzf_and_vim <CR>")
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -47,7 +42,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>w", "<C-w>")
 
-vim.keymap.set("", "<leader>tb", "<cmd>Pick buffers<CR>")
 vim.keymap.set("", "<leader>bn", "<cmd>bnext<CR>")
 vim.keymap.set("", "<leader>bp", "<cmd>bprevious<CR>")
 

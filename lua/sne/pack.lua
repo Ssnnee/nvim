@@ -5,7 +5,7 @@ vim.pack.add({
 	'https://github.com/kylechui/nvim-surround' ,
 	'https://github.com/brenoprata10/nvim-highlight-colors' ,
 	'https://github.com/stevearc/oil.nvim' ,
-	'https://github.com/nvim-treesitter/nvim-treesitter' ,
+	'https://github.com/nvim-treesitter/nvim-treesitter',
 	'https://github.com/mbbill/undotree' ,
 	'https://github.com/tpope/vim-fugitive' ,
 	'https://github.com/echasnovski/mini.pick' ,
