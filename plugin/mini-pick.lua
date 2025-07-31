@@ -91,9 +91,15 @@ require('mini.pick').setup {
     config = win_config,
 
     -- String to use as caret in prompt
-    prompt_caret = '▏',
+    -- prompt_caret = '▏',
+    prompt_caret = '█ ',
 
     -- String to use as prefix in prompt
     prompt_prefix = '> ',
   },
 }
+
+vim.keymap.set('n', '<C-p>', "<cmd>Pick files<cr>")
+vim.keymap.set('n', '<leader>ps', '<cmd>Pick grep<CR>')
+vim.keymap.set("", "<leader>pb", "<cmd>Pick buffers<CR>")
+vim.keymap.set("", "<leader>ph", "<cmd>Pick help<CR>")
