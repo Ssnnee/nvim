@@ -1,5 +1,4 @@
 vim.pack.add({
-	'https://github.com/vague2k/vague.nvim' ,
 	'https://github.com/lewis6991/gitsigns.nvim' ,
 	'https://github.com/github/copilot.vim' ,
 	'https://github.com/kylechui/nvim-surround' ,
