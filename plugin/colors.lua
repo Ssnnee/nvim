@@ -52,59 +52,39 @@ require("vague").setup({
     },
   },
   -- Override colors
+  -- Override colors for Ghostly Neovim Theme
   colors = {
     -- Background and base colors
     bg = "#181818",
     fg = "#cdd6f4",
     floatBorder = "#333333",
-    line = "#121212",
+    line = "#1f1f1f", -- Slightly brighter line color for better visibility against bg
 
-    -- Syntax colors (moins saturés)
-    comment = "#606079",
-    -- comment = "#444444",
-    builtin = "#888888",
-    func = "#96a6c8",
-    string = "#94e2d5",
-    number = "#9e95c7",
-    property = "#f4f4ff",
-    constant = "#95a99f",
-    parameter = "#f4f4ff",
-    -- property = "#888888",  -- Gris moyen
-    -- constant = "#999999",  -- Gris clair
-    -- parameter = "#888888", -- Gris moyen
-
-    -- builtin = "#95a99f",   -- gruber-darker-quartz
-    -- func = "#96a6c8",      -- gruber-darker-niagara
-    -- string = "#73c936",    -- gruber-darker-green
-    -- number = "#9e95c7",    -- gruber-darker-wisteria
-    -- property = "#f4f4ff",  -- gruber-darker-fg+1
-    -- constant = "#95a99f",  -- gruber-darker-quartz
-    -- parameter = "#f4f4ff", -- gruber-darker-fg+1
+    -- Syntax colors (Ghostly/Muted saturation)
+    comment = "#555555",    -- More neutral and darker gray for a 'ghostly' effect
+    builtin = "#888888",    -- Gray for built-in functions/types
+    func = "#96a6c8",       -- Cool blue for functions (Retained)
+    string = "#94e2d5",     -- Cyan/Turquoise for strings (Retained)
+    number = "#9e95c7",     -- Soft purple for numbers (Retained)
+    property = "#cdd6f4",   -- Soft white for properties (Slightly dimmed from #f4f4ff)
+    constant = "#999999",   -- Medium gray for constants (Better readability)
+    parameter = "#cdd6f4",  -- Soft white for parameters (Slightly dimmed from #f4f4ff)
 
     -- UI elements
-    visual = "#333738",
-    error = "#f38ba8",     -- Gardé de votre terminal pour la visibilité des erreurs
-    warning = "#f9e2af",   -- Gardé pour la visibilité des avertissements
-    hint = "#888888",      -- Gris pour les suggestions
+    visual = "#333738",     -- Retained dark highlight color
+    error = "#f38ba8",      -- Red for high visibility errors (Retained)
+    warning = "#f9e2af",    -- Yellow for high visibility warnings (Retained)
+    hint = "#888888",       -- Gray for suggestions/hints (Retained)
 
     -- Language elements
-    operator = "#666666",  -- Gris foncé
-    keyword = "#f9e2af",   -- Gris moyen
-    type = "#999999",      -- Gris clair
-
-    -- operator = "#e4e4ef",  -- gruber-darker-fg
-    -- keyword = "#ffdd33",   -- gruber-darker-yellow
-    -- type = "#95a99f",      -- gruber-darker-quartz
+    operator = "#a0a0a0",    -- Lighter gray for better visibility
+    keyword = "#f9e2af",    -- Yellow/Gold for keywords (Retained)
+    type = "#999999",        -- Medium gray for type definitions (Retained)
 
     -- Search and diff
-    -- search = "#b4befe",
-    search = "#f9e2af",
-    plus = "#94e2d5",      -- Vert désaturé
-    delta = "#f9e2af",     -- Jaune désaturé
-
-    -- search = "#ffdd33",    -- gruber-darker-yellow
-    -- plus = "#73c936",      -- gruber-darker-green
-    -- delta = "#ffdd33",     -- gruber-darker-yellow
+    search = "#f9e2af",     -- Retained yellow search color
+    plus = "#94e2d5",       -- Cyan for added lines (Retained)
+    delta = "#f9e2af",      -- Yellow for changed lines (Retained)
   },
 })
 vim.cmd.colorscheme "vague"
