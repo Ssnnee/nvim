@@ -42,8 +42,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>w", "<C-w>")
 
-vim.keymap.set("", "<leader>bn", "<cmd>bnext<CR>")
-vim.keymap.set("", "<leader>bp", "<cmd>bprevious<CR>")
+vim.keymap.set("", "<C-t>", "<cmd>bnext<CR>")
+vim.keymap.set("", "<C-s>", "<cmd>bprevious<CR>")
 
 vim.keymap.set("v", "<leader>ec", "<cmd>.!toilet -w 200 -f term -F border<CR>")
 vim.keymap.set("v", "<leader>fi", "<cmd>.!figlet<CR>")
